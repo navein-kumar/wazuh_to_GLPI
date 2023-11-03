@@ -1,0 +1,23 @@
+POST /apirest.php/Ticket HTTP/1.1
+App-Token: pHr6DebwvrI4ogWR7IDybkmYuFZLjMFhzAc8lkM0
+Session-Token: lokb0k3e0ph03jl0h9eva4nbii
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.34.0
+Accept: */*
+Postman-Token: 1cc5c858-2914-478e-aa10-ff705c273532
+Host: 20.244.117.199
+Accept-Encoding: gzip, deflate
+Connection: close
+Content-Length: 177
+
+{"input": {
+	
+	   
+		"name": "Wazuh Security Alert",
+        "content": "Wazuh Alert",
+        "urgency": 5,
+		"impact": 5,
+		"itilcategories_id": 0,
+		"type": 1
+		}
+}
