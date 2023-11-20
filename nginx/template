@@ -1,0 +1,26 @@
+events { }
+
+http {
+
+  server {
+    listen 80;
+    server_name localhost;
+    location / {
+        return 301 https://$host$request_uri;
+    }
+    }
+
+  server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    ssl_certificate /ssl/server.cert;
+    ssl_certificate_key /ssl/server.key;
+    location / {
+        proxy_pass http://glpi:80;
+
+        
+    }
+
+    }
+
+}

@@ -29,8 +29,8 @@ agentname = alert_json['agent']['name']
 # Generate request
 # headers = {'content-type': 'application/json'}
 headers = {
-    'App-Token': 'pHr6DebwvrI4ogWR7IDybkmYuFZLjMFhzAc8lkM0',
-    'Session-Token': 'lokb0k3e0ph03jl0h9eva4nbii',
+    'App-Token': 'NKSzsl5ge2s5g0wocOY32KsbSORf7Q9LLx5EQCGk',
+    'Session-Token': 'fb2b10tspvu7pnkcd6mac8k5kd',
     'Content-Type': 'application/json'
 }
 
@@ -48,7 +48,7 @@ headers = {
 
 issue_data = json.dumps({
   "input": {
-    "name": 'WAZUH alert on ' + agentname + '',
+    "name": 'SIEM Alert on ' + agentip + '',
     "content": 'Alert_Details: ' + ruledescription + ' "\n" Agent_IP: '+ str(agentip) + ' "\n" Agent_Name: ' + agentname + ' "\n" Rule_ID: ' + str(ruleid) + ' "\n" Alert_Level: ' + str(alertlevel) + ' ',
     "urgency": 3,
     "impact": 3,
