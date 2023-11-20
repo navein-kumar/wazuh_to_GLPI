@@ -7,24 +7,62 @@ services:
     container_name: mariadb
     hostname: mariadb
     volumes:
-      - /var/lib/mysql:/var/lib/mysql
+      - ./var/lib/mysql:/var/lib/mysql
     environment:
-      - MARIADB_ROOT_PASSWORD=pass
+      - MARIADB_ROOT_PASSWORD=glpi_password
       - MARIADB_DATABASE=glpidb
       - MARIADB_USER=glpi_user
-      - MARIADB_PASSWORD=glpi
+      - MARIADB_PASSWORD=glpi_password
+      - TZ=Asia/Kolkata
     restart: always
+    networks:
+      - single-node_default
+
 
   glpi:
     image: diouxx/glpi
     container_name : glpi
+    networks:
+      - single-node_default
     hostname: glpi
-    ports:
-      - "80:80"
+    #ports:
+    #  - "127.0.0.1:8080:80"
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - /var/www/html/glpi/:/var/www/html/glpi
+      - ./var/www/html/glpi/:/var/www/html/glpi
     environment:
-      - TIMEZONE=America/Chicago
+      - TIMEZONE=Asia/Kolkata
     restart: always
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - 60082:80
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+      UPLOAD_LIMIT: 512M
+      MEMORY_LIMIT: 512M
+    networks:
+      - single-node_default
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/template:/etc/nginx/nginx.conf
+      - ./nginx/server.crt:/ssl/server.cert
+      - ./nginx/server.key:/ssl/server.key
+    networks:
+      - single-node_default        
+networks:
+    single-node_default:
+      external: true
+
+
+
