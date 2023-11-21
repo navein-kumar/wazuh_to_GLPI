@@ -29,8 +29,8 @@ agentname = alert_json['agent']['name']
 # Generate request
 # headers = {'content-type': 'application/json'}
 headers = {
-    'App-Token': 'NKSzsl5ge2s5g0wocOY32KsbSORf7Q9LLx5EQCGk',
-    'Session-Token': 'fb2b10tspvu7pnkcd6mac8k5kd',
+    'App-Token': 'gymXH2Ha4yFqx4lUG86776u1Ex65TnQvAcijbIu3',
+    'Session-Token': 'o48d6rc0tvji2gj534gb9q122u',
     'Content-Type': 'application/json'
 }
 
