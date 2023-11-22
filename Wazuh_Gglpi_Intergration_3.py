@@ -53,6 +53,8 @@ issue_data = json.dumps({
     "urgency": 3,
     "impact": 3,
     "itilcategories_id": 0,
+    "slas_id_tto":7,
+    "slas_id_ttr":8,
     "type": 1
   }
 })
