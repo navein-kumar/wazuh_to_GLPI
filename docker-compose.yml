@@ -25,8 +25,8 @@ services:
     networks:
       - single-node_default
     hostname: glpi
-    #ports:
-    #  - "127.0.0.1:8080:80"
+    ports:
+      - "127.0.0.1:8080:80"
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
