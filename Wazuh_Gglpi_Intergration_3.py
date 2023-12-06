@@ -48,7 +48,7 @@ headers = {
 
 issue_data = json.dumps({
   "input": {
-    "name": 'Wazuh Alert on ' + agentname + '',
+    "name": 'SIEM Alert on ' + agentname + '',
     "content": 'Alert_Details: ' + ruledescription + ' "\n" Agent_IP: '+ str(agentip) + ' "\n" Agent_Name: ' + agentname + ' "\n" Rule_ID: ' + str(ruleid) + ' "\n" Alert_Level: ' + str(alertlevel) + ' ',
     "urgency": 3,
     "impact": 3,
