@@ -30,7 +30,7 @@ agentname = alert_json['agent']['name']
 # headers = {'content-type': 'application/json'}
 headers = {
     'App-Token': 'gymXH2Ha4yFqx4lUG86776u1Ex65TnQvAcijbIu3',
-    'Session-Token': 'robbt4bf1bovrlp3ok9o1efqh1',
+    'Session-Token': 'hdga97shgivi3hu2f9rbck77mk',
     'Content-Type': 'application/json'
 }
 
