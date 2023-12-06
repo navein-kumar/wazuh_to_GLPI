@@ -1,12 +1,12 @@
 GET /apirest.php/initSession/ HTTP/1.1
-Host: 20.244.117.199
-Authorization: user_token Lp11OY0yf7Bu9Wg2OXefS2oqhA8f5VfTi071tJUU
-App-Token: pHr6DebwvrI4ogWR7IDybkmYuFZLjMFhzAc8lkM0
+Host: 46.250.237.191:60085
+Authorization: user_token sXkSqfRSXRslxCBRL7xPhhN9XxOKeXxbizigK1d4
+App-Token: gymXH2Ha4yFqx4lUG86776u1Ex65TnQvAcijbIu3
 Content-Length: 0
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
-Connection: close
 Cookie: glpi_9d72bb49642c57bc19f1848bed2dca06=p4tvvju8b3qrvmdhmf6h2ehb4d; glpi_9d72bb49642c57bc19f1848bed2dca06_rememberme=%5B2%2C%223Rocy0b0xO6P9D1nXu4x0JNd0ZtGm65TL6daKdXH%22%5D
 Upgrade-Insecure-Requests: 1
+
