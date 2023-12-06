@@ -1,5 +1,5 @@
   <integration>
-  <name>slack</name>
+  <name>shuffle</name>
   <level>5</level>
   <hook_url>http://glpi/apirest.php/Ticket</hook_url>
   <alert_format>json</alert_format>
